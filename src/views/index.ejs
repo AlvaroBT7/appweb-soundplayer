@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index page</title>
+    <script defer type="module" src="/js/index.js"></script>
+    <%- include("partials/header.ejs") %>
+</head>
+<body>
+    
+    <main class="container">
+        <%- include("partials/menu") %>
+        <section class="sec">
+            <h2 class="title">Sound Player <i class="fa-solid fa-music"></i></h2>
+            <div class="global-container">
+                <div class="slect-container">
+                    <select id="select">
+                        <option id="censure" value="/sounds/censure.mp3">Censura</option>
+                        <option id="shotgun" value="/sounds/shotgun.mp3">Shotgun</option>
+                        <option id="mc-tnt" value="/sounds/tnt.mp3">Minecraft TNT</option>
+                        <option id="robber-duck" value="/sounds/duck.mp3">Patito</option>
+                    </select>
+                </div>
+                <div class="button-container">
+                    <input id="btn-play" class="sound-player-button" type="button" value="Play">
+                    <input id="btn-pause" class="sound-player-button" type="button" value="Pause">
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <%- include("partials/footer") %>
+</body>
+</html>
